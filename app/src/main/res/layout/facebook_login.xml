@@ -5,9 +5,10 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#1877F2"
+    android:background="#1d3469"
     tools:context=".MainActivity">
 
+    <!-- Facebook Title -->
     <TextView
         android:id="@+id/facebook"
         android:layout_width="wrap_content"
@@ -17,12 +18,9 @@
         android:text="Facebook"
         android:textColor="@color/white"
         android:textSize="25sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="HardcodedText,InvalidId" />
 
+    <!-- Email or Phone EditText -->
     <EditText
         android:id="@+id/emil"
         android:layout_width="match_parent"
@@ -31,13 +29,13 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
-        android:layout_marginBottom="1dp"
-        android:background="@color/white"
+        android:background="@drawable/rounded_edit_text"
         android:drawableStart="@drawable/baseline_person_24"
-        android:hint="email or phone number"
+        android:hint="Email or phone number"
         android:padding="15dp"
         tools:ignore="HardcodedText" />
 
+    <!-- Password EditText -->
     <EditText
         android:id="@+id/password"
         android:layout_width="match_parent"
@@ -45,28 +43,28 @@
         android:layout_below="@+id/emil"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
-        android:background="@color/white"
+        android:background="@drawable/rounded_edit_text"
         android:drawableStart="@drawable/lock"
-        android:hint="password"
+        android:hint="Password"
         android:inputType="textPassword"
         android:padding="15dp"
-
         tools:ignore="HardcodedText" />
 
+    <!-- Login Button -->
     <Button
         android:id="@+id/login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/password"
         android:layout_centerHorizontal="true"
-
         android:layout_marginStart="20dp"
         android:layout_marginTop="50dp"
         android:layout_marginEnd="20dp"
-        android:backgroundTint="#0084ff"
+        android:backgroundTint="#3d5c95"
         android:textSize="25sp"
         android:text="@string/login" />
 
+    <!-- Sign Up Link -->
     <TextView
         android:id="@+id/sign"
         android:layout_width="wrap_content"
@@ -77,8 +75,9 @@
         android:layout_marginEnd="20dp"
         android:textColor="@color/white"
         android:layout_below="@+id/login"
-        android:layout_marginTop="100dp"
-        />
+        android:layout_marginTop="100dp" />
+
+    <!-- Help Center Link -->
     <TextView
         android:id="@+id/help"
         android:layout_width="wrap_content"
@@ -89,7 +88,6 @@
         android:layout_marginEnd="20dp"
         android:textColor="@color/white"
         android:layout_below="@+id/sign"
-        android:layout_marginTop="50dp"
-        />
+        android:layout_marginTop="50dp" />
 
 </RelativeLayout>
