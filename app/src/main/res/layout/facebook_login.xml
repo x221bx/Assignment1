@@ -33,6 +33,7 @@
         android:drawableStart="@drawable/baseline_person_24"
         android:hint="Email or phone number"
         android:padding="15dp"
+        android:inputType="text"
         tools:ignore="HardcodedText" />
 
     <!-- Password EditText -->

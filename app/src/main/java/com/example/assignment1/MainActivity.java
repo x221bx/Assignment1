@@ -1,28 +1,34 @@
 package com.example.assignment1;
 
-import static com.example.assignment1.R.id.main;
-
-import android.annotation.SuppressLint;
 import android.os.Bundle;
-
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
-        setContentView(R.layout.facebook_login);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
+        setContentView(R.layout.activity_main);
+
+        RecyclerView recyclerView = findViewById(R.id.recycler_view);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        List<Post> postList = generatePosts(1000);
+        PostAdapter postAdapter = new PostAdapter(postList);
+        recyclerView.setAdapter(postAdapter);
+    }
+
+    private List<Post> generatePosts(int count) {
+        List<Post> posts = new ArrayList<>();
+        for (int i = 1; i <= count; i++) {
+            String title = "User " + i;
+            String description = "This is post number " + i;
+            posts.add(new Post(title, description));
+        }
+        return posts;
     }
 }
