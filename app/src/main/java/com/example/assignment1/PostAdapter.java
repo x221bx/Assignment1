@@ -23,7 +23,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostViewHolder
     @Override
     public PostViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View itemView = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.post, parent, false); // Use the layout file for each post item
+                .inflate(R.layout.post, parent, false);  
         return new PostViewHolder(itemView);
     }
 
