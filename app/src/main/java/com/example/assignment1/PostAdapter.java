@@ -42,7 +42,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostViewHolder
     public static class PostViewHolder extends RecyclerView.ViewHolder {
         public TextView username;
         public TextView postText;
-        public ImageView profilePicture;  // You can add more views as needed
+        public ImageView profilePicture;   
 
         public PostViewHolder(@NonNull View itemView) {
             super(itemView);
